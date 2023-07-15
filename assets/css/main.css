@@ -83,10 +83,18 @@ input, select, textarea {
 		-ms-overflow-style: scrollbar;
 	}
 
-	@media screen and (max-width: 480px) {
+	/* @media screen and (max-width: 480px) {
 
 		html, body {
 			min-width: 420px;
+		}
+
+	} */
+
+	@media screen and (max-width: 360px) {
+
+		html, body {
+			min-width: 300px;
 		}
 
 	}
@@ -316,8 +324,12 @@ input, select, textarea {
 		color: #ffffff;
 	}
 
+	/* a{
+		color: #b65200;
+	} */
 	a:hover {
 		color: #ffffff;
+		/* color: #0064b6 !important; */
 	}
 
 	strong, b {
@@ -2691,18 +2703,33 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding: 0;
-		margin-left: 0;
+		margin: .75em 0 0 0;
+		/* margin-left: 0; */
+		/* margin-top: .75em; */
 	}
 
 		ul.icons li {
 			display: inline-block;
 			/* padding: 0 0.65em 0 0; */
-			margin: 0;
+			/* margin: 0; */
+			/* padding: 0; */
+		}
+		/* ul.icons li:first-child {
+			padding: 0 .5em 0 0;
 		}
 
-			ul.icons li:last-child {
+		ul.icons li:last-child {
+			padding: 0 0 0 .5em;
+		}
+
+		ul.icons li:not(:first-child):not(:last-child),
+		ul.icons li:only-child {
+			padding: 0 .5em !important;
+		} */
+		
+			/* ul.icons li:last-child {
 				padding-right: 0 !important;
-			}
+			} */
 
 /* Section/Article */
 
@@ -3146,10 +3173,11 @@ input, select, textarea {
 				border-radius: 4px;
 			}
 			.statistics li .custom-list li.role strong, .statistics li .custom-list li.role b {
-				border-bottom: 1px solid #222;
+				/* border-bottom: 1px solid #222; */
 				color: #222 !important;
 				border-radius: 0;
-				/* font-weight: 600; */
+				padding: 0;
+				font-weight: 600;
 			}
 
 			.statistics li p strong, .statistics li p b{
@@ -3166,11 +3194,11 @@ input, select, textarea {
 				border-bottom: 3px solid #00B2A9;
 				/* padding-bottom: 3px; */
 			}
-			.statistics li .club a{
+			.statistics li .club a, .statistics li p .club{
 				color: #C8102E;
 				font-weight: bold;
 			}
-			.statistics li .club a:hover{
+			.statistics li .club a:hover, .statistics li p a:hover{
 				/* background-color: #00B2A9; */
 				color: #00B2A9 !important;
 			}
@@ -3182,14 +3210,14 @@ input, select, textarea {
 				border:0px !important;
 			}
 			.custom-list li.keyproj strong a{
-				background-color: #b65200;
+				background-color: #222;
 				text-decoration: none !important; 
 				border:0px !important;
 				border-radius: 4px;
 				padding: 0 4px;
 			}
 			li.keyproj strong a:hover, p.keyproj strong:hover, b.keyproj:hover {
-				background-color: #222;
+				background-color: #b65200;
 				color: rgba(247, 247, 247);
 			}
 			.custom-list li.azure strong a{
@@ -3206,10 +3234,6 @@ input, select, textarea {
 				margin: 0;
 				/* padding: 0; */
 			}
-			.statistics li ul.icons li{
-				/* margin: 0; */
-				padding: 0 4px;
-			}
 
 			.statistics li:first-child {
 				border-top-left-radius: 8px;
@@ -3221,7 +3245,18 @@ input, select, textarea {
 				border-bottom-right-radius: 8px;
 			}
 
+			.statistics li ul.icons li:first-child {
+				padding: 0 .5em .25em .5em;
+			}
+			.statistics li ul.icons li:last-child {
+				padding: 0 .5em .25em .5em;
+			}
 
+			.statistics li ul.icons li:not(:first-child):not(:last-child),
+			.statistics li ul.icons li:only-child {
+				padding: 0 .5em .25em .5em !important;
+			}	
+			
 			.statistics .stats li:first-child {
 				border-top-left-radius: 8px;
 				border-top-right-radius: 8px;
@@ -3261,18 +3296,19 @@ input, select, textarea {
 				border-bottom-right-radius: 8px;
 			}
 
-			  /* WORK EXPERIENCE*/
-			  .statistics li.style1 {
+			/* WORK EXPERIENCE*/
+			.statistics li.style1 {
 				flex-basis: 100%;
 				max-width: 100%;
 				text-align: center;
 				margin: 0;
+				/* padding: 10em; */
 				border-bottom-left-radius: 0;
 				border-top-right-radius: 8px;
 				border-top-left-radius: 8px;
 				border-bottom-right-radius: 0;
-			  }
-			  .statistics li.style3 {
+			}
+			.statistics li.style3 {
 				border-top-left-radius: 8px;
 				border-top-right-radius: 8px;
 				border-bottom-right-radius: 8px;
@@ -3281,11 +3317,11 @@ input, select, textarea {
 			.statistics li.style3 p {
 				text-align: center;
 			}
-			  .statistics .stats li {
+			.statistics .stats li {
 				flex-basis: inherit;
 				/* max-width: 100%; */
 				/* min-width: 100%; */
-			  }
+			}
 
 		}
 
@@ -3323,31 +3359,31 @@ input, select, textarea {
 				max-width: 100%;
 				text-align: center;
 				margin: 0;
-				padding: .5em 0;
-			  }
+				padding: 1em .75em;
+			}
 
-			  .statistics li.style1 h2 {
+			.statistics li.style1 h2 {
 				margin: 0;
 				padding: 0;
-			  }
+			}
 
-			  .statistics li.style3 {
+			.statistics li.style3 {
 				flex-basis: 100%;
 				max-width: 100%;
 				border-top-left-radius: 8px;
 				border-top-right-radius: 8px;
 				border-bottom-right-radius: 8px;
 				border-bottom-left-radius: 8px;
-			  }
-			  .statistics li.style4 {
+			}
+			.statistics li.style4 {
 				flex-basis: 100%;
 				max-width: 100%;
-			  }
+			}
 
-			  .statistics li.style7 {
+			.statistics li.style7 {
 				flex-basis: 100%;
 				max-width: 100%;
-			  }
+			}
 
 				.statistics li:first-child {
 					border-bottom-left-radius: 0;
@@ -3499,7 +3535,8 @@ input, select, textarea {
 
 		#header h1 {
 			/* margin: 0 0 0.25em 0; */
-			margin: 0 0 .1em 0;
+			/* margin: 0 0 .1em 0; */
+			margin: 0;
 		}
 
 		#header p {
@@ -3546,6 +3583,37 @@ input, select, textarea {
 					max-width: 75%;
 				}
 
+		#header ul {
+			cursor: default;
+			list-style: none;
+			padding: 0;
+			margin: .75em 0 0 0;
+			/* margin-left: 0; */
+			/* margin-top: .75em; */
+		}
+
+		#header ul li {
+			display: inline-block;
+		}		
+
+		#header li strong, #header li b {
+
+			border-bottom: 1px solid rgba(247, 247, 247);
+			padding-bottom: 0;
+		} 
+
+		#header ul li:first-child {
+			padding: 0 .5em .25em .5em;
+		}
+
+		#header ul li:last-child {
+			padding: 0 .5em .25em .5em;
+		}
+
+		/* #header ul li:not(:first-child):not(:last-child),
+		#header ul li:only-child {
+			padding: 0 .5em !important;
+		} */
 		@media screen and (max-width: 1280px) {
 
 			#header {
@@ -3605,6 +3673,19 @@ input, select, textarea {
 					padding: 4em 1.5em 1em 1.5em ;
 				}
 
+				#header ul li:first-child {
+					padding-right: 0.25;
+				}
+		
+				#header ul li:last-child {
+					padding-left: 0.25;
+				}
+		
+				#header ul li:not(:first-child):not(:last-child),
+				#header ul li:only-child {
+					padding: 0 !important;
+				}
+
 		}
 
 		@media screen and (max-width: 360px) {
@@ -3653,9 +3734,7 @@ input, select, textarea {
 
 		/* margin-bottom: 50px; */
 	}
-	.anchor {
-        display: inline-block;
-      }
+	
 
 		#nav input, #nav select, #nav textarea {
 			color: #636363;
