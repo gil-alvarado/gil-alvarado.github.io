@@ -5,34 +5,45 @@
   margin: 0;
 }
 body {
-  font-family: sans-serif;
-  font-size: 16px;
+  /* font-family: sans-serif; */
+  /* font-size: 16px; */
 }
 nav {
   background: #222;
-  padding: 0 15px;
+  /* padding: 0 15px; */
+  position: fixed;
+  /* bottom: 0; */
+  /* width: 100% !important; */
+  width: 64em;
+  max-width: calc(100% - 10em);
+  margin: auto !important;
+  padding: 0 !important;
 }
 a {
-  color: white;
-  text-decoration: none;
+  /* color: white; */
+  /* text-decoration: none !important; */
 }
 .menu,
 .submenu {
-  list-style-type: none;
+  list-style-type: none !important;
+  padding: 0 !important;
+  
 }
 .logo {
-  font-size: 20px;
-  padding: 7.5px 10px 7.5px 0;
+  /* font-size: 20px; */
+  /* padding: 7.5px 10px 7.5px 0; */
 }
 .item {
   padding: 10px;
 }
 .item.button {
-  padding: 9px 5px;
+  /* padding: 9px 5px; */
 }
 .item:not(.button) a:hover,
 .item a:hover::after {
-  color: #ccc;
+  background-color: rgba(247,247,247) !important;
+  color: #222 !important;
+  font-weight: 600;
 }
 /* Mobile menu */
 .menu {
@@ -43,14 +54,28 @@ a {
 }
 .menu li a {
   display: block;
-  padding: 15px 5px;
+  padding: 10px 5px;
+  border-radius: 4px;
+  text-decoration: none !important; 
+  border: 0px !important;
+  background-color: #222 !important;
+  color: rgba(247,247,247) !important;
 }
-.menu li.subitem a {
-  padding: 15px;
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+  background-color: rgba(247,247,247) !important;
+  color: #222 !important;
+  font-weight: 600;
 }
+
 .toggle {
   order: 1;
   font-size: 20px;
+}
+.toggle a {
+  text-decoration: none !important; 
+  border: 0px !important;
 }
 .item.button {
   order: 2;
@@ -60,7 +85,18 @@ a {
   width: 100%;
   text-align: center;
   display: none;
+  
 }
+.item a{
+  
+}
+
+.active a{
+  /* box-shadow: none; */
+}
+/* background-color: #222;
+color: rgba(247, 247, 247);
+box-shadow: none; */
 .active .item {
   display: block;
 }
@@ -115,8 +151,8 @@ a {
   }
   /* Button up from tablet screen */
   .menu li.button a {
-    padding: 10px 15px;
-    margin: 5px 0;
+    /* padding: 10px 15px; */
+    /* margin: 5px 0; */
   }
   .button a {
     background: #0080ff;
@@ -148,14 +184,14 @@ a {
     order: 0;
   }
   .item {
-    order: 1;
+    /* order: 1; */
     position: relative;
     display: block;
     width: auto;
   }
-  .button {
+  /* .button {
     order: 2;
-  }
+  } */
   .submenu-active .submenu {
     display: block;
     position: absolute;

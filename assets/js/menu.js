@@ -13,6 +13,14 @@ function toggleMenu() {
   }
 }
 
+// Add active class to the current button (highlight it)
+$(document).ready(function () {
+  
+  $(".item").click(function (){
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+});
+
 /* Activate Submenu */
 function toggleItem() {
   if (this.classList.contains("submenu-active")) {
