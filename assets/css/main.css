@@ -2974,18 +2974,6 @@ input, select, textarea {
 
 /* Statistics  UNORDERED LIST*/
 
-.company {
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
-	display: flex;
-	width: 100%;
-	margin: 0 0 3em 0;
-	padding: 0;
-	list-style: none;
-	cursor: default;
-}
-
 	.statistics {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -3545,8 +3533,6 @@ input, select, textarea {
 			align-items: center;
 			justify-content: center;
 			flex-flow: column;
-			/* margin-bottom: -4rem; */
-			/* padding:0 !important; */
 		}
 
 			#header.alt h1 {
@@ -4240,7 +4226,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#footer {
-				padding: 4em 3em 2em 3em ;
+				/* padding: 4em 3em 2em 3em ; */
 				display: block;
 				margin: 0 0 3em 0;
 				width: 100%;
@@ -4253,7 +4239,7 @@ input, select, textarea {
 				}
 
 				#footer .copyright {
-					text-align: left;
+					/* text-align: left; */
 				}
 
 		}
@@ -4261,7 +4247,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 3em 2em 1em 2em ;
+				/* padding: 3em 2em 1em 2em ; */
 			}
 
 		}
@@ -4269,7 +4255,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#footer {
-				padding: 3em 1.5em 1em 1.5em ;
+				/* padding: 3em 1.5em 1em 1.5em ; */
 			}
 
 		}
@@ -4277,7 +4263,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#footer {
-				padding: 2.5em 1em 0.5em 1em ;
+				/* padding: 2.5em 1em 0.5em 1em ; */
 			}
 
 		}

@@ -28,7 +28,7 @@
 		});
 
 	// Nav.
-		var $nav = $('#nav');
+		var $nav = $('#myNAV');
 
 		if ($nav.length > 0) {
 
