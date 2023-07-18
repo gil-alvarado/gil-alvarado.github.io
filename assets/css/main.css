@@ -4190,58 +4190,17 @@ input, select, textarea {
 							border-radius: 0;
 						}
 
+		} 
+		ul {
+		list-style: disc;
+		/* margin-left: 20px;
+		margin-top: 10px;  */
+		/* Add margin for spacing between list items */
 		}
-
-		.education-section {
-			display: flex;
-			flex-wrap: wrap;
-			/*justify-content: center; */ 
-			/* Center the columns horizontally */
-			align-items: center; /* Center the columns vertically */
-			margin-bottom: 20px;
-			box-sizing: border-box; /* Add box-sizing property */
-		  }
-		  
-		  .school-column {
-			flex-basis: 100%;
-			max-width: 100%;
-			background-color: lime; /* Add desired background color */
-			padding: 10px; 
-			/* Add padding for better spacing */
-		  }
-		  
-		  @media screen and (min-width: 600px) {
-			.school-column {
-			  flex-basis: 25%;
-			  max-width: 25%;
-			}
-		  }
-		  
-		  .achievements-column {
-			flex-basis: 100%;
-			max-width: 100%;
-			background-color: lightblue; /* Add desired background color */
-			padding: 10px; /* Add padding for better spacing */
-		  }
-		  
-		  @media screen and (min-width: 600px) {
-			.achievements-column {
-			  flex-basis: 50%;
-			  max-width: 50%;
-			}
-		  }
-		  
-		  ul {
-			list-style: disc;
-			/* margin-left: 20px;
-			margin-top: 10px;  */
-			/* Add margin for spacing between list items */
-		  }
-		  
-		  h3, h4, p {
-			margin: 0;
-		  }
-		  
+		
+		h3, h4, p {
+		margin: 0;
+		}  
 /* Footer */
 
 	#footer {
