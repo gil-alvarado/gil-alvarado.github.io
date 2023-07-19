@@ -6,6 +6,7 @@
 }
 nav {
   background: #222;
+  opacity: .90;
   position: fixed;
   /* bottom: 0; */
   width: 64em;
@@ -60,7 +61,7 @@ nav {
   border: 0px !important;
 }
 .item {
-  order: 1;
+  order: 2;
   width: 100%;
   text-align: center;
   display: none;
