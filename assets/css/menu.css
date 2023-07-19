@@ -59,26 +59,19 @@ nav {
   text-decoration: none !important; 
   border: 0px !important;
 }
-.item.button {
-  /* order: 2; */
-}
 .item {
-  /* order: 3; */
+  order: 1;
   width: 100%;
   text-align: center;
   display: none;
   
 }
-.item a{
-  
+.item.active a {
+  color: #222 !important;
+  background-color: rgba(247, 247, 247) !important;
+  box-shadow: none !important;
+  font-weight: 600;
 }
-
-.active{
-  /* box-shadow: none; */
-}
-/* background-color: #222;
-color: rgba(247, 247, 247);
-box-shadow: none; */
 .active .item {
   display: block;
 }

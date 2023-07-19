@@ -15,9 +15,9 @@ function toggleMenu() {
 
 // Add active class to the current button (highlight it)
 $(document).ready(function () {
-  
   $(".item").click(function (){
-    $(this).addClass("active").siblings().removeClass("active");
+    $(".item").removeClass("active"); // Remove "active" class from all items
+    $(this).addClass("active"); // Add "active" class to the clicked item
   });
 });
 
