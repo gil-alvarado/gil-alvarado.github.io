@@ -76,10 +76,6 @@ nav {
 .active .item {
   display: block;
 }
-.button.secondary {
-  /* divider between buttons and menu links */
-  border-bottom: 1px #444 solid;
-}
 
 
 @media screen and (max-width: 360px) {
@@ -121,8 +117,5 @@ nav {
   }
   .toggle {
     display: none;
-  }
-  .submenu-active {
-    border-radius: 0;
   }
 }
