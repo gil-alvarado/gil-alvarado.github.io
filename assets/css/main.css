@@ -3512,12 +3512,19 @@ input, select, textarea {
 	#header {
 		/* padding: 5em 5em 1em 5em ; */
 		text-align: center;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
 	}
 
 		#header h1 {
 			/* margin: 0 0 0.25em 0; */
 			/* margin: 0 0 .1em 0; */
 			margin: 0;
+			font-size: 3.25em;
 		}
 
 		#header p {
@@ -3527,19 +3534,19 @@ input, select, textarea {
 
 		#header.alt {
 			/* padding: 7em 5em 7em 5em ; */
-			width: 100%;
+			/* width: 100%;
 			height: 100vh;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex-flow: column;
+			flex-flow: column; */
 		}
 
-			#header.alt h1 {
+			/* #header.alt h1 {
 				font-size: 3.25em;
-			}
+			} */
 
-			#header.alt > * {
+			#header > * {/* #header.alt > * { */
 				-moz-transition: opacity 3s ease;
 				-webkit-transition: opacity 3s ease;
 				-ms-transition: opacity 3s ease;
@@ -3551,7 +3558,7 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-			#header.alt .logo {
+			#header.logo {
 				-moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
 				-webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
 				-ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
@@ -3564,7 +3571,7 @@ input, select, textarea {
 				margin: 0 0 1.5em 0;
 			}
 
-				#header.alt .logo img {
+				#header.logo img {
 					display: block;
 					margin: 0 auto;
 					max-width: 75%;
@@ -3646,7 +3653,7 @@ input, select, textarea {
 					/* margin-bottom: -6rem; */
 				}
 
-					#header.alt h1 {
+					#header h1 {
 						font-size: 2.5em;
 					}
 
@@ -3693,7 +3700,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		body.is-preload #header.alt .logo {
+		body.is-preload #header .logo {
 			-moz-transform: scale(0.8) rotate(-30deg);
 			-webkit-transform: scale(0.8) rotate(-30deg);
 			-ms-transform: scale(0.8) rotate(-30deg);

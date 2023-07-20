@@ -3,6 +3,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/*
+	Modified by Gilbert Alvarado
+*/
 //code from menu.js
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
@@ -10,33 +13,22 @@ const items = document.querySelectorAll(".item");
 
 // Toggle mobile menu
 function toggleMenu() {
-  if (menu.classList.contains("active")) {
-    menu.classList.remove("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
-  } else {
-    menu.classList.add("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
-  }
-  event.stopPropagation();
+	if (menu.classList.contains("active")) {
+		menu.classList.remove("active");
+		toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+	} else {
+		menu.classList.add("active");
+		toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+	}
+	event.stopPropagation();
 }
-
-// Add active class to the current button (highlight it)
-$(document).ready(function () {
-	$(".item").click(function () {
-	  $(".item").removeClass("active"); // Remove "active" class from all items
-	  $(this).addClass("active"); // Add "active" class to the clicked item
-
-	// Close the menu once the user selects a listed item
-	//   toggleMenu();
-	});
-  });
 
 // Close the menu when clicking outside
 function closeMenu(e) {
-  if (menu.classList.contains("active") && !menu.contains(e.target) && !toggle.contains(e.target)) {
-    // Close the menu if clicked outside the menu and toggle button
-    toggleMenu();
-  }
+	if (menu.classList.contains("active") && !menu.contains(e.target) && !toggle.contains(e.target)) {
+		// Close the menu if clicked outside the menu and toggle button
+		toggleMenu();
+	}
 }
 
 // Event Listeners
@@ -48,8 +40,11 @@ document.addEventListener("click", closeMenu);
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body'),
-		$main = $('#main');
+    $body = $('body'),
+    $main = $('#main'),
+    $nav = $('#myNAV'),
+    $nav_a = $nav.find('a');
+	// var $toggle_a = $nav.find('.toggle a');
 
 	// Breakpoints.
 		breakpoints({
@@ -61,32 +56,57 @@ document.addEventListener("click", closeMenu);
 			xxsmall:  [ null,      '360px'  ]
 		});
 
+	// Function to update active navigation item based on the current section in viewport.
+	function updateActiveNavItem() {
+		var scrollPosition = $window.scrollTop();
+		
+	
+		$nav_a.each(function() {
+		var $this = $(this),
+			id = $this.attr('href'),
+			$section = $(id),
+			sectionTop = $section.offset().top - $nav.height() - 20, // Consider the height of the fixed navigation bar.
+			sectionBottom = sectionTop + $section.outerHeight();
+	
+		if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+			// The current section is in the viewport.
+			$nav_a.removeClass('active');
+			$this.addClass('active');
+		}
+		});
+	}//end updateActivateNavItem
+
+		    // Event listeners
+	$window.on('scroll', function() {
+		// Update the active navigation item when scrolling.
+		updateActiveNavItem();
+	});
+
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
+				// On page load, update the active navigation item.
+				updateActiveNavItem();
 			}, 100);
 		});
-
-	// Nav.
-		var $nav = $('#myNAV');
 
 		if ($nav.length > 0) {
 
 			// Shrink effect.
-				$main
-					.scrollex({
-						mode: 'top',
-						enter: function() {
-							$nav.addClass('alt');
-						},
-						leave: function() {
-							$nav.removeClass('alt');
-						},
-					});
+				// $main
+				// 	.scrollex({
+				// 		mode: 'top',
+				// 		enter: function() {
+				// 			$nav.addClass('alt');
+				// 		},
+				// 		leave: function() {
+				// 			$nav.removeClass('alt');
+				// 		},
+				// 	});
 
 			// Links.
-				var $nav_a = $nav.find('a');
+				// var $nav_a = $nav.find('a');
 
 				$nav_a
 					.scrolly({
