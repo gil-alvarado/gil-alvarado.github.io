@@ -11,7 +11,7 @@ nav {
   /* bottom: 0; */
   width: 64em;
   max-width: calc(100% - 10em);
-  padding: 1em;
+  padding: .25em;
   z-index: 1;
 }
 
@@ -95,12 +95,36 @@ nav {
 
   nav {
     max-width: calc(100% - 2em);
+    /* padding: 0; */
   }
+  /* .item {
+    padding:  1.5px 0;
+  }
+  .menu li a{
+    padding: 5px 0 ;
+  } */
 
 }
 
 
 /* Tablet menu */
+@media all and (max-width: 960px) {
+  nav {
+    padding: 0;
+  }
+  .menu .item{
+    /* flex-wrap: wrap; */
+    /* justify-content:space-evenly; */
+    /* width: 75%; */
+  }
+  .item {
+    padding:  1px 0;
+    /* margin: auto 100%%; */
+  }
+  .menu li a{
+    padding: 2px 0 ;
+  }
+}
 @media all and (min-width: 700px) {
   .toggle {
     flex: 1;
