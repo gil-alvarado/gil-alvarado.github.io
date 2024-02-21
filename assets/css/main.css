@@ -3072,6 +3072,10 @@ input, select, textarea {
 			.statistics li.style1 p.dates{
 				font-weight: 100;
 			}
+			.statistics li.style1 h3.dates{
+				font-weight: 100;
+				color: #ffffff !important;
+			}
 			.statistics li.style3 p.dates{
 				text-align: center !important;
 				margin-top: .15em;
