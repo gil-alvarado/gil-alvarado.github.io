@@ -140,10 +140,14 @@ input, select, textarea {
 		/* color:rgb(213, 207, 191); */
 	}
 
+
+
+	/* FONT CHANGE */
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 14pt;
-		font-weight: 400;
+		/* font-weight: 500; */
+		font-weight: 500;
 		line-height: 1.65;
 	}
 
@@ -186,7 +190,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 400;
+		font-weight: 500;
 	}
 
 	em, i {
@@ -3106,9 +3110,12 @@ input, select, textarea {
 			.statistics li.style3 h2, h3 {
 				color:  #222 !important;
 			}
+
+			/* FONT CHANGE */
 			.statistics li.style3 p {
 				/* color:  #222 !important; */
-				font-weight: 500;
+				/* font-weight: 500; */
+				font-weight: 550;
 				text-align: left;
 				margin: 1em 0;
 			}
@@ -3147,22 +3154,58 @@ input, select, textarea {
 			.statistics li .custom-list strong, .statistics li .custom-list b {
 				padding: 0 2px;
 				color: rgba(247, 247, 247) !important;
-				border-radius: 4px;
+				/* border-radius: 4px; */
 			}
 			.statistics li .custom-list li.role strong, .statistics li .custom-list li.role b {
 				/* border-bottom: 1px solid #222; */
-				color: #222 !important;
-				border-radius: 0;
-				padding: 0;
+				/* color: #222 !important; */
+				color: #b65200 !important;
+				/* border-radius: 0;
+				padding: 0; */
+				text-decoration: underline;
+   				text-underline-offset: 2px;
 				font-weight: 600;
 			}
 
-			.statistics li p strong, .statistics li p b{
+			
+
+			.statistics li strong.azure, .statistics li p strong, .statistics li p b{
 				padding: 0 2px;
 				background-color: #b65200;
 				color: rgba(247, 247, 247) !important;
 				border-radius: 4px;
 			} 
+			p strong.azure, p b.azure, li strong.azure, li b.azure{
+				background-color: #0064b6 !important;
+				/* color: rgba(247, 247, 247) !important; */
+			}
+			.statistics li p strong.tool, .statistics li p b.tool, .custom-list li strong.tool{
+				background-color:  transparent !important;
+				color: #b65200 !important;
+				/* border-radius: 0;
+				padding: 0; */
+				font-weight: bolder;
+				/* text-decoration: underline; */
+				/* border-bottom: 2px;
+				border-bottom-style: solid;
+				padding-bottom: 1px; */
+
+				text-decoration: underline;
+   				text-underline-offset: 2px;
+			}
+			.statistics li p strong.azure-bold, .statistics li p b.azure-bold, .custom-list li strong.azure-bold{
+				background-color:  transparent !important;
+				color: #0064b6 !important;
+				/* border-radius: 0;
+				padding: 0; */
+				font-weight: bolder;
+				/* border-bottom: 2px;
+				border-bottom-style: solid;
+				padding-bottom: 1px; */
+				text-decoration: underline;
+   				text-underline-offset: 2px;
+			}
+
 			.statistics li .club strong, .statistics li .club b{
 				padding: 0 4px;
 				background-color: #C8102E !important;
@@ -3179,9 +3222,6 @@ input, select, textarea {
 				/* background-color: #00B2A9; */
 				color: #00B2A9 !important;
 			}
-			p strong.azure, p b.azure, li strong.azure, li b.azure{
-				background-color: #0064b6 !important;
-			}
 			p strong.azure a, p b.azure a, li strong.azure a, li b.azure a{
 				text-decoration: none !important; 
 				border:0px !important;
@@ -3197,15 +3237,22 @@ input, select, textarea {
 				background-color: #b65200;
 				color: rgba(247, 247, 247);
 			}
-			.custom-list li.azure strong a{
+
+			/*FREELANCE*/
+			.custom-list li.azure-bold strong a{
+				/* color: #0064b6 !important;
+				text-decoration: underline;
+   				text-underline-offset: 2px; */
+				/* text-decoration: underline !important;
+				border:0px !important;
+				border-radius: 4px;
+				padding: 0 4px; */
+			}
+			.custom-list li strong.azure-bold a:hover{
 				background-color: #0064b6 !important;
-				text-decoration: none !important;
 				border:0px !important;
 				border-radius: 4px;
 				padding: 0 4px;
-			}
-			.custom-list li.azure strong a:hover{
-				background-color: #222 !important;
 			}
 			.statistics li ul.icons{
 				margin: 0;
