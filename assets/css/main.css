@@ -4576,3 +4576,52 @@ a.image {
 ul.actions.fit {
     width: calc(100% + 1rem);
 }
+
+
+/* Cloud background container */
+.cloud-bg {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	overflow: hidden;
+	pointer-events: none;
+  }
+  
+  /* Make SVG fill the screen */
+  .cloud-bg svg {
+	width: 120%;
+	height: 120%;
+	position: absolute;
+	top: -10%;
+	left: -10%;
+  }
+  
+  /* Outline-only cloud */
+  .cloud-path {
+	fill: none;
+	stroke: rgba(255, 255, 255, 0.782);
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+  
+	/* Outline animation */
+	stroke-dasharray: 1200;
+	stroke-dashoffset: 1200;
+	animation:
+	  drawCloud 6s ease-out forwards,
+	  floatCloud 20s ease-in-out infinite;
+  }
+  
+  /* Draw the outline */
+  @keyframes drawCloud {
+	to {
+	  stroke-dashoffset: 0;
+	}
+  }
+  
+  /* Gentle floating motion */
+  @keyframes floatCloud {
+	0%   { transform: translate(0, 0); }
+	50%  { transform: translate(30px, -15px); }
+	100% { transform: translate(0, 0); }
+  }
