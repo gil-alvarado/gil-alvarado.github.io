@@ -4410,8 +4410,8 @@ input, select, textarea {
 		background-color: #222;
 		border-radius: 8px;
 		padding: 0 30px;
-		padding-top: .5em;
-		padding-bottom: .5em;
+		padding-top: 1em;
+		padding-bottom: 1em;
 	} 
 	#main > .posts > article > header  > *{
 		color: rgba(247, 247, 247);
